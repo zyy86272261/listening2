@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>08 02perspective</title>
+		
+		<script src="js/jquery-3.1.0.js"></script>
+		<style>
+	    .hotnew-posts {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    float: left;
+    height: 290px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    overflow: hidden;
+    position: relative;
+    width: 600px;
+}
+.hotnew-posts ul {
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 3000px;
+}
+.hotnew-posts ul li {
+    display: inline;
+    float: left;
+    height: 316px;
+    margin: 0;
+    padding: 0;
+    width: 600px;
+}
+.hotnew-posts ul li a img {
+width: 100%;
+height: 200px;
+}
+.hotnew-posts ul li .hot-title, .post-info-front .title {
+    color: #000000;
+    display: block;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 15px 20px 10px;
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+    width: 244px;
+}
+.hotnew-posts ul li .hot-title {
+}
+.hotnew-posts ul li .hot-excerpt {
+    color: #999999;
+    display: block;
+    font-size: 12px;
+    overflow: hidden;
+    padding: 0 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+span.excerpt {
+    color: #999;
+    display: block;
+    font-size: 12px;
+    height: 20px;
+    overflow: hidden;
+    padding: 0 20px;
+    top: 270px;
+    word-wrap: break-word;
+}
+.clearfix:after {
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	overflow: hidden;
+	content: ".";
+}
+	.img-control{
+	display: inline-block;
+	text-align: center;
+	width: 40px;
+	height: 56px;
+	background-color: #000;
+	opacity: 0.6;
+	filter:alpha(opacity=60);
+	position: absolute;
+	z-index: 1;
+	cursor: pointer;
+}
+.img-control img{
+	margin-top: 13px;
+	width: 16px;
+	height: 30px;
+}
+.img-control:hover{
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+	background: #ff2a33;
+}
+.img-left{
+	left: 0;
+	top:70px;
+}
+.img-right{
+	right: 0;
+	top:70px;
+}	
+		</style>
+	</head>
+	<body>
+	    <div class="hotnew-posts">
+						<ul  class="clearfix">
+								 <li>
+									 <a target="_blank" class="title" href="http://uedc.163.com/12677.html">
+										<img src="http://uedc.163.com/wp-content/uploads/2014/12/banner.png">
+										<span class="hot-title">把握交互的第四维 — 时机关系</span>
+									 </a>
+									 <span class="hot-excerpt">日常的交互设计工作中，设计师在明确了需求目标、用户场景，搭建了信息结构之后，下一步便是构思如何让这些。</span>
+							     </li>
+							     <li>
+									 <a target="_blank" class="title" href="http://uedc.163.com/12529.html">
+										<img src="http://uedc.163.com/wp-content/uploads/2014/11/banner2x2.jpg">
+										<span class="hot-title">产品的商业化一定会破坏用户体验吗？</span>
+									 </a>
+									 <span class="hot-excerpt">一边是产品的商业需求，它可以改善产品的市场表现，为企业带来利润。</span>
+							     </li>
+							     <li>
+									 <a target="_blank" class="title" href="http://uedc.163.com/12158.html">
+										<img src="http://uedc.163.com/wp-content/uploads/2014/09/浅谈服务设计.jpg">
+										<span class="hot-title">浅谈服务设计</span>
+									 </a>
+									 <span class="hot-excerpt">做交互设计也有好几个年头了，最近一直在思考一个问题，我们这些俗称线框仔的交互设计师，如何保持自己的竞争力，</span>
+							     </li>
+							     <li>
+									 <a target="_blank" class="title" href="http://uedc.163.com/12005.html">
+										<img src="http://uedc.163.com/wp-content/uploads/2014/06/banner21.png">
+										<span class="hot-title">网易云音乐iPad V1.0 设计总结</span>
+									 </a>
+									 <span class="hot-excerpt">当网易云音乐iphone平台上线的那一刻开始，项目组就不断地收到了很多用户希望iPad平台</span>
+							     </li>				
+								 </ul>
+					<span class="img-control img-left" onselectstart="return false;">
+						<img src="images/left-control.png">
+					</span>
+					<span class="img-control img-right" onselectstart="return false;">
+						<img src="images/right-control.png">
+					</span>
+				</div>
+		 
+		    
+		 <script>
+			
+	
+						var x = 0;
+						var timer;
+						var width = Number($(".hotnew-posts ul li").css('width').split('px')[0]);
+					    var speed = 100;
+					    function moveleft(){
+					      if(x == 3){
+					      	 x = 0;
+					      	 $(".hotnew-posts ul").stop(true,true).animate({'left':0},speed);
+					      }else{
+					      	 $(".hotnew-posts ul").stop(true,true).animate({'left':-(++x)*width+'px'},speed);
+					      }
+					    }
+					    function moveright(){
+					    	if(x == 0){
+					    		x=3;
+					    		$(".hotnew-posts ul").stop(true,true).animate({'left':-x*width+'px'},speed);
+					    	}else{
+					    		$(".hotnew-posts ul").stop(true,true).animate({'left':-(--x)*width+'px'},speed);
+					    	}
+					    }
+					    timer = setInterval(moveleft,5000);
+					    $('.hotnew-posts').bind('mouseenter',function(){
+					    	clearInterval(timer);
+					    });
+					    $('.hotnew-posts').bind('mouseleave',function(){
+					    	timer = setInterval(moveleft,5000);
+					    });
+					    $(".img-right").bind('click',function(){
+					    	moveleft();
+					    });
+					    $(".img-left").bind('click',function(){
+					    	moveright();
+					    });
+			    	
+		</script>
+		 
+	</body>
+</html>
