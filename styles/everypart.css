@@ -1,0 +1,9 @@
+.current-position{width:90%;background:bule;margin-left:30px;}
+.current-position span{color:hsl(0,10%,30%);font-size:14px;}
+.current-position a{color:purple;}
+.current-position a:hover{color:hsl(0,80%,20%);}
+.msdb{width:90%;height:30rem;padding:0px 30px;margin:0 30px;}
+.title{width:90%;margin:15px auto;text-align:center;background:red;}
+.title h2{color:white;vertical-align:5rem;display:block;padding:15px;letter-spacing: 2px;}
+.msdb-on{}
+.table{border:2px solid red;}
