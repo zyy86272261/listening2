@@ -1,9 +1,69 @@
+@media screen and (min-width:960px){
 .current-position{width:90%;background:bule;margin-left:30px;}
 .current-position span{color:hsl(0,10%,30%);font-size:14px;}
-.current-position a{color:purple;}
+.current-position a{color:purple;font-size:14px;}
 .current-position a:hover{color:hsl(0,80%,20%);}
-.msdb{width:90%;height:30rem;padding:0px 30px;margin:0 30px;}
-.title{width:90%;margin:15px auto;text-align:center;background:red;}
-.title h2{color:white;vertical-align:5rem;display:block;padding:15px;letter-spacing: 2px;}
-.msdb-on{}
-.table{border:2px solid red;}
+.msdb{width:90%;padding:5px 10px;}
+.title{width:70%;margin:10px auto;text-align:center;}
+.title h2{color:rgba(2,2,0,.8);vertical-align:5rem;display:block;padding:10px 0px 18px;letter-spacing: 2px;}
+.msdb-on{padding-right:0px;}
+.table{border:1px solid red;width:70%;margin:5px auto;text-align:center;color:white;border-collapse:collapse;box-shadow:0px 0px 4px 2px hsl(0,80%,80%);}
+.table tr{height:3rem;border:1px solid #fff;background-color:#3399CC;}
+.table tr td,.table tr th{font-size:1.2rem;border:1px solid #fff;transition:all 0.5s ease-in;-webkit-transition:all 0.5s ease-in;-moz-transition:all 0.5s ease-in;-ms-transition:all 0.5s ease-in;cursor:pointer;}
+.table tr td a{color: #fff;}
+.table tr td:hover{background-color:#3366FF;}
+.table tr td:hover a{color:#fff;}}
+
+@media screen and (min-width:600px) and (max-width:960px){
+
+.current-position{width:90%;background:bule;margin-left:10px;}
+.current-position span{color:hsl(0,10%,30%);font-size:14px;}
+.current-position a{color:purple;font-size:14px;}
+.current-position a:hover{color:hsl(0,80%,20%);}
+.msdb{width:80%;padding:10px 0px;}
+.title{width:90%;margin:5px auto;text-align:center;}
+.title h2{color:rgba(2,2,0,.8);vertical-align:5rem;display:block;padding:15px 0px 15px;letter-spacing: 2px;}
+.msdb-on{padding-right:0px;}
+.table{border:1px solid red;min-width:90%;text-align:center;color:white;border-collapse:collapse;box-shadow:0px 0px 4px 2px hsl(0,80%,80%);}
+.table tr{height:3rem;border:1px solid #fff;background-color:#3399CC;}
+.table tr td,.table tr th{font-size:1.1rem;border:1px solid #fff;transition:all 0.5s ease-in;-webkit-transition:all 0.5s ease-in;-moz-transition:all 0.5s ease-in;-ms-transition:all 0.5s ease-in;cursor:pointer;}
+.table tr td a{color: #fff;}
+.table tr td:hover{background-color:#3366FF;}
+.table tr td:hover a{color:#fff;}}
+
+
+@media screen and (min-width:460px) and (max-width:600px){
+
+.current-position{width:90%;background:bule;margin-left:25px;}
+.current-position span{color:hsl(0,10%,30%);font-size:14px;}
+.current-position a{color:purple;font-size:14px;}
+.current-position a:hover{color:hsl(0,80%,20%);}
+.msdb{width:90%;padding:10px 0px;}
+.title{width:90%;margin:5px auto;text-align:center;}
+.title h2{color:rgba(2,2,0,.8);vertical-align:5rem;display:block;padding:15px 0px 15px;letter-spacing: 2px;}
+.msdb-on{padding-right:0px;}
+.table{border:1px solid red;min-width:90%;margin:0 auto;text-align:center;color:white;border-collapse:collapse;box-shadow:0px 0px 4px 2px hsl(0,80%,80%);}
+.table tr{height:3rem;border:1px solid #fff;background-color:#3399CC;}
+.table tr td,.table tr th{font-size:1.1rem;border:1px solid #fff;transition:all 0.5s ease-in;-webkit-transition:all 0.5s ease-in;-moz-transition:all 0.5s ease-in;-ms-transition:all 0.5s ease-in;cursor:pointer;}
+.table tr td a{color: #fff;}
+.table tr td:hover{background-color:#3366FF;}
+.table tr td:hover a{color:#fff;}}
+
+
+@media screen and (max-width:460px){
+.current-position{width:90%;background:bule;margin-left:25px;}
+.current-position span{color:hsl(0,10%,30%);font-size:14px;}
+.current-position a{color:purple;font-size:14px;}
+.current-position a:hover{color:hsl(0,80%,20%);}
+.msdb{width:100%;padding:10px 0px;}
+.title{width:90%;margin:5px auto;text-align:center;}
+.title h2{color:rgba(2,2,0,.8);vertical-align:5rem;display:block;padding:15px 0px 15px;letter-spacing: 2px;}
+.msdb-on{padding-right:0px;}
+.table{border:1px solid red;width:90%;margin:0 auto;text-align:center;color:white;border-collapse:collapse;box-shadow:0px 0px 4px 2px hsl(0,80%,80%);}
+.table tr{height:3rem;border:1px solid #fff;background-color:#3399CC;}
+.table tr td,.table tr th{font-size:1rem;border:1px solid #fff;transition:all 0.5s ease-in;-webkit-transition:all 0.5s ease-in;-moz-transition:all 0.5s ease-in;-ms-transition:all 0.5s ease-in;cursor:pointer;}
+.table tr td a{color: #fff;}
+.table tr td:hover{background-color:#3366FF;}
+.table tr td:hover a{color:#fff;}}
+
+
